@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Set meta tag to bootstrap responsive -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Set charset to UTF-8 for avoiding accentuation troubleshooting -->
+	<meta charset="UTF-8"> 
+	<title>Maps API</title>
+	<!-- Bootstrap minified CSS -->
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<!--Temporary google maps API only used for showing it on the template 
+	delete as well JS import for the map.-->
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
+	<script src="js/map.js"></script>
+</head>
+<body>
+	<!-- Responsive container -->
+	<div class="container-fluid">
+		<h1>Google Maps Filter</h1>
+		<h3>Filter and find restaurants, gas stations and many more.</h3>
+		<div class="row">
+			<!-- Div MAP (must delete only for template purposes -->
+			<div class="col-sm-6" id="googleMap" style="display: block; height: 400px;"></div>
+			<!-- Div Provinces -->
+			<div class="col-sm-2" id="provinces">
+				<div class="alert alert-info">
+					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+					<strong>Select a province.</strong> 
+				</div>
+				<select name="province" id="select-provinces" class="form-control" required="required">
+					<option value="Sevilla">Sevilla</option>
+					<option value="Cadiz">Cádiz</option>
+					<option value="Granada">Granada</option>
+				</select>
+			</div>
+			<!-- Div Cities -->
+			<div class="col-sm-2" id="cities">
+				<div class="alert alert-info">
+					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+					<strong>Seleccione a city.</strong> 
+				</div>
+				<select name="cities" id="select-cities" class="form-control" required="required">
+					<option value="Jerez">Jerez de la Frontera</option>
+					<option value="Tarifa">Tarifa</option>
+				</select>
+			</div>
+			<!-- Div Filter -->
+			<div class="col-sm-2" id="filter">
+				<div class="alert alert-info">
+					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+					<strong>Select your filter.</strong> 
+				</div>
+				<select name="filter" id="select-filter" class="form-control" required="required">
+					<option value="Bar">Bar</option>
+					<option value="Gas Station">Gas Station</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<!-- jQuery (temporary until local files are installed) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
