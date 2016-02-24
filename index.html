@@ -10,8 +10,9 @@
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 	<!--Temporary google maps API only used for showing it on the template 
 	delete as well JS import for the map.-->
+	<!-- Override bootstrap css -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="http://maps.googleapis.com/maps/api/js"></script>
-	<script src="js/map.js"></script>
 </head>
 <body>
 	<!-- Responsive container -->
@@ -19,8 +20,13 @@
 		<h1>Google Maps Filter</h1>
 		<h3>Filter and find restaurants, gas stations and many more.</h3>
 		<div class="row">
-			<!-- Div MAP (must delete only for template purposes -->
-			<div class="col-sm-6" id="googleMap" style="display: block; height: 400px;"></div>
+			<!-- Div MAP -->
+			<div class="col-sm-6" id="googleMap">
+				<p>IMPLEMENT MAP HERE</p>
+				<div class="col-sm-12" id="infoMap">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis quod ducimus, culpa voluptatum adipisci dolorum, iure facilis corporis ad sapiente neque possimus alias delectus aut obcaecati ullam dolor sed odit.</p>
+				</div>
+			</div>
 			<!-- Div Provinces -->
 			<div class="col-sm-2" id="provinces">
 				<div class="alert alert-info">
