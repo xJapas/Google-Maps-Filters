@@ -62,6 +62,7 @@ function initAutocomplete() {
       markers.push(new google.maps.Marker({
         map: map,
         icon: icon,
+        draggable: true,
         title: place.name,
         position: place.geometry.location
       }));
@@ -92,8 +93,14 @@ function busquedaSitios(){
   var input2=document.getElementById('categoria').value;
 
   //obtengo el lugar escogido en el input de autocompletar
-  var busqueda=searchBox.getPlaces();
-  var location=busqueda[0];
+  //var busqueda=searchBox.getPlaces();
+  //var location=busqueda[0];
+
+
+  var radius=document.getElementById('radius').value;
+  radius*=1000;
+  // obtengo la posicion del marcador
+  var marker=markers[0].getPosition();
 
   // location.geometry.location -> esta es la lat y long del lugar escogido
   // para darsela al metodo nearbysearch en location:
@@ -104,8 +111,8 @@ function busquedaSitios(){
   // hace la busqueda con los parametros que le indicamos
   var service = new google.maps.places.PlacesService(map);
   service.nearbySearch({
-    location: location.geometry.location,
-    radius: 5000,
+    location: marker,
+    radius: radius,
     keyword: input2
   }, callback);
 
